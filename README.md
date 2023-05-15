@@ -34,7 +34,7 @@ Program to implement the given logic function using NAND and NOR gates and to ve
 Developed by: M Srinath
 RegisterNumber:  212222230147
 */
-*/
+/*
 module tt1(A,B,C,D,W,X,Y,Z,F1,F2);
 input A,B,C,D,W,Y,X,Z;
 output F1,F2;
