@@ -28,40 +28,48 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Logic Diagram
 ## Procedure
-## Program:
-/*
+Step 1: Create a project with required entities.
+Step 2: Create a module along with respective file name.
+Step 3: Run the respective programs for the given boolean equations.
+Step 4: Run the module and get the respective RTL outputs.
+Step 5: Create university program(VWF) for getting timing diagram.
+Step 6: Give the respective inputs for timing diagram and obtain the results.
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: M Srinath
-RegisterNumber:  212222230147
-*/
-/*
-module tt1(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,Y,X,Z;
-output F1,F2;
-wire A1,A2,A3,A4,A5,B1,B2,B3,B4,B5;
-assign A1 = ((~A)&(~B)&(~C)&(~D));
-assign A2=(A&(~C)&(~D));
-assign A3=((~B)&C&(~D));
-assign A4=((~A)&B&C&D);
-assign A5=(B&(~C)&D);
-assign B1=(X&(~Y)&Z);
-assign B2=((~X)&(~Y)&Z);
-assign B3=((~W)&X&Y);
-assign B4=(W&(~X)&Y);
-assign B5=(W&X&Y);
-assign F1=(A1|A2|A3|A4|A5);
-assign F2=(B1|B2|B3|B4|B5);
-endmodule
+Developed by: M SRINATH
+RegisterNumber: 212222230147
+USING NAND OPERATION
+module fourexp(A,B,C,D,F);  
+input A,B,C,D;  
+output F;  
+wire P,Q,R;  
+assign P = C&(~B)&(~A);  
+assign Q = D&(~C)&(~A);  
+assign R = (~C)&B&(~A);  
+assign F = (~P&~Q&~R);  
+endmodule  
+USING NOR OPERATION
+module fourexp(A,B,C,D,F);  
+input A,B,C,D;  
+output F;  
+wire P,Q,R,S;  
+assign P = C&(~B)&A;  
+assign Q = D&(~C)&A;  
+assign R = C&(~B)&A;  
+assign S = ~(P|Q|R);  
+assign F = ~S;  
+endmodule  
 */
 ## RTL realization
 
 ## Output:
-## RTL
-![image](https://github.com/MunagalaSrinath/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118678482/16480dcc-d726-4db2-8ce3-638f6e9fd1e0)
-![image](https://github.com/MunagalaSrinath/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118678482/25b03506-3304-4f65-9f52-52a1497a3eed)
+## RTL FOR NAND ![image](https://user-images.githubusercontent.com/123470785/214344822-b443edee-f040-41e8-90ab-10ae49bf8791.png)
+FOR NOR ![image](https://user-images.githubusercontent.com/123470785/214345105-928992f9-cca2-4f47-b58c-8b44a6ea292f.png)
+## Timing Diagram FOR NAND ![image](https://user-images.githubusercontent.com/123470785/214345368-9f9d1b67-1387-4696-9882-22de0925401b.png)
+FOR NOR 
+![image](https://user-images.githubusercontent.com/123470785/214345574-c81b6138-4244-40af-8bf3-aa13399349a5.png)
 
-## Timing Diagram
-![image](https://github.com/MunagalaSrinath/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118678482/beeab392-6ce1-4fc4-b6ae-5edbd8e2ce76)
-
+Truth Table: FOR NAND ![image](https://user-images.githubusercontent.com/123470785/214346012-7c77b780-b81e-462f-a5b1-769339ea79fc.png)
+FOR NOR
+![image](https://user-images.githubusercontent.com/123470785/214346425-988f69ea-2c0e-4970-9c3c-c2a9b2dee8e8.png)
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
